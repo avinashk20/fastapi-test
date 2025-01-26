@@ -14,7 +14,7 @@ def get_google_sheets_service():
         from google.oauth2 import service_account
         
         creds = service_account.Credentials.from_service_account_file(
-            'creds/credentials.json', 
+            'credentials.json', 
             scopes=SCOPES
         )
         return build('sheets', 'v4', credentials=creds)
